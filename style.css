@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #f7f8f9;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 55%;
+    height: 80%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    box-shadow: 1px 1px 30px 5px rgba(0, 0, 0, 0.103);
+    border-radius: 5px;
+    max-width: 901px;
+    max-height: 680px;
+}
+
+.right {
+    width: 60%;
+    height: 100%;
+    background: url(/img/bg-img.svg) no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.left {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input {
+    margin-top: 10px;
+    width: 350px;
+    height: 50px;
+    border: 2px solid #e9f1f3;
+    border-radius: 8px;
+    background-color: #f7f8f9;
+    padding-left: 15px;
+}
+
+.form-input::placeholder {
+    color: #d5dddf;
+}
+
+h1 {
+    color: #fd5353;
+}
+
+.icons-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px;
+}
+
+.login-icon {
+    width: 40px;
+    margin-left: 5px;
+}
+
+.btn {
+    border: none;
+    background-color: #fe5454;
+    color: white;
+    padding: 15px 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #eb4d4d;
+}
+
+.btn:active {
+    transform: scale(0.9);
+    transition: 2ms linear;
+}
+
+.btn-outline {
+    text-decoration: none;
+    border: 2px solid #fe5454;
+    color: #fe5454;
+    background-color: unset;
+    font-weight: bold;
+}
+
+.btn-outline:hover {
+    color: white;
+    background-color: #fe5454;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+
+input[type="checkbox"] {
+    visibility: hidden;
+}
+
+label {
+    cursor: pointer;
+}
+
+input[type="checkbox"]+label:before {
+    background: #fe5454;
+    border-radius: 1px;
+    content: "\00a0";
+    display: inline-block;
+    font: 16px/1em sans-serif;
+    height: 16px;
+    margin: 0 .25em 0 0;
+    padding: 0;
+    vertical-align: top;
+    width: 16px;
+}
+
+input[type="checkbox"]:checked+label:before {
+    background: #fe5454;
+    color: rgb(255, 255, 255);
+    content: "\2713";
+    text-align: center;
+}
+
+input[type="checkbox"]:checked+label:after {
+    background: #fe5454;
+    font-weight: bold;
+    color: black;
+}
+
+input[type="checkbox"]:focus+label::before {
+    outline: rgb(59, 153, 252) auto 5px;
+}
+
+.checkbox-container {
+    margin-top: 35px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+p{
+    padding: 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .right{
+        display: none;
+    }
+    .container{
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .container{
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .container{
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+    }
+
+    .form-input{
+        width: 300px;
+        height: 40px;    
+    }
+    .btn{
+        padding: 10px 35px;
+    }
+
+    label{
+        font-size: 13px;
+    }
+}
