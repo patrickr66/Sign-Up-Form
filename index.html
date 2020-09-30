@@ -8,17 +8,20 @@
 </head>
 <body>
     <div class="container">
-        <div class="left">
+        <div class="form-wrapper">
             <h1>Create Account</h1>
             <div class="icons-container">
-                <a href="#"><img class="login-icon" src="/img/googleplus.svg" alt="Icon"></a>
-                <a href="#"><img class="login-icon" src="/img/tweeter.svg" alt="Icon"></a>
-                <a href="#"><img class="login-icon" src="/img/linkedin.svg" alt="Icon"></a>
+                <a href="#"><img class="login-icon" src="/img/googleplus.svg" alt="Google Authentication"></a>
+                <a href="#"><img class="login-icon" src="/img/tweeter.svg" alt="Tweeter Authentication"></a>
+                <a href="#"><img class="login-icon" src="/img/linkedin.svg" alt="LinkedIn Authentication"></a>
             </div>
             <p>or use your email for registration:</p>
             <form>
+                <label for="name" class="form-label">First Name</label>
                 <input class="form-input" type="text" id="name" required placeholder="Name">
+                <label for="email" class="form-label">Email Address</label>
                 <input class="form-input" type="email" id="email" required placeholder="Email">
+                <label for="password" class="form-label">Password</label>
                 <input class="form-input" type="password" id="password" required placeholder="Password">
                 <div class="checkbox-container">
                 <input type="checkbox" id="c1" name="cb">
@@ -29,7 +32,7 @@
                 </div>
             </form>
         </div>
-        <div class="right">
+        <div class="image-wrapper">
         </div>
     </div>
 </body>
